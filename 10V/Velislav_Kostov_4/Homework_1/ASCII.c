@@ -2,7 +2,7 @@
 
 int main(){
 int a;
-	for(a = 0;a<256;a++){
+	for(a = 0;a<=128;a++){
 	printf(" - %d \n",a);
 	printf("%c",a);
 	}
