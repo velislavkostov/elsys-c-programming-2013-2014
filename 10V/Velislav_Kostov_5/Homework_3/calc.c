@@ -7,8 +7,9 @@ void mul(int a,int b);
 void div(int a,int b);
 void mod(int a,int b);
 
-int main(){
 const char *error ="Error\0";
+
+int main(){
 char *commands[] = {"add\0","sub\0","mul\0","div\0","mod\0"};
 char choice[5];
 int num1, num2;
@@ -52,12 +53,20 @@ printf("%d\n",a * b);
 }
 
 void div(int a,int b){
+if (b == 0)
+	{
+	printf("%s\n",error);
+	}
+else
 printf("%d\n",a / b);
 }
 
 void mod(int a,int b){
-float c;
-c = a % b;
-printf("%f\n",c);
+if (b == 0)
+	{
+	printf("%s\n",error);
+	}
+else
+printf("%d\n",a % b);
 }
 
